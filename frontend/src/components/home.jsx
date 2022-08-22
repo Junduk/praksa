@@ -27,7 +27,11 @@ const Home = () => {
 
   const getTodos = async () => {
     try {
-      const res = await axios.get(`${API_URL}/todos`);
+      const res = await axios.get(`${API_URL}/todos`, {
+        headers : {
+          'Access-Control-Allow-Origin': '*' // ovo obrisati
+        }
+      });
       setTodos(res.data);
     } catch (err) {
       console.log(err);
