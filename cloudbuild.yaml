@@ -7,9 +7,8 @@ steps:
     entrypoint: 'terraform'
     args:
       - 'plan'
-      - '-out=tfplan'
   - name: 'hashicorp/terraform:latest'
     entrypoint: 'terraform'
     args:
       - 'apply'
-      - 'tfplan'
+      - '-auto-approve'
