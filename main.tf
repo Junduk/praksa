@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("/home/kuzmanovic1337/tf/cloud-internship-dejan-cf55f72fcd31.json")
+  credentials = file("cloud-internship-dejan-cf55f72fcd31.json")
   project     = "cloud-internship-dejan"
   region      = "us-central1"
 }
