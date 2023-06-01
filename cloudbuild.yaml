@@ -6,6 +6,11 @@ steps:
   - name: 'hashicorp/terraform:latest'
     entrypoint: 'terraform'
     args:
+      - 'destroy'
+      - '-auto-approve'
+  - name: 'hashicorp/terraform:latest'
+    entrypoint: 'terraform'
+    args:
       - 'plan'
   - name: 'hashicorp/terraform:latest'
     entrypoint: 'terraform'
